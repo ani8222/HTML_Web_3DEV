@@ -1,0 +1,62 @@
+doctype html(lang='es')
+head
+    meta(charset='UTF-8')
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    title 3Dev Bussiness & Consulting
+    link(rel="stylesheet", href="css/font-awesome.min.css")
+    link(rel='stylesheet', href='css/style-index.css')
+    link(rel="stylesheet", href="css/animate.min.css")
+    link(rel="shortcut icon", type="image/png", href="favicon.png")
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js')
+    script(src='js/index.js')
+body
+    section.bg#bg(data-type='parallax_section' data-speed='10')
+        article
+            h1.animated.bounceInDown 12 años de experiencia
+            p.animated.bounceInLeft microsoft partner
+            img.animated.bounceInUp(src="image/3dev.png", alt="")
+    include _menu.jade
+    .container
+        section#desarrollo
+            article
+                figure
+                    img(src="image/WindowsAzure.png", alt="")
+                header 
+                    h3 Windows Azure
+                p El cómputador en la nueve o cloud computing es una de las tendencias de mayor impacto actualmente.
+            article
+                figure
+                    img(src="image/software-factory.png", alt="")
+                header 
+                    h3 Software Factory
+                p Es una forma de tercerizacion de servicios basados en el desarrllo de software.
+            article
+                figure
+                    img(src="image/alm.png", alt="")
+                header 
+                    h3 Application Lifecycle Management
+                p Es un enfoque de producción, sistematizacion y despliegue de proyecto de software diseñado con objetivo.
+            article
+                figure
+                    img(src="image/mobile.png", alt="")
+                header 
+                    h3 Mobile Development
+                p El cómputador en la nueve o cloud computing es una de las tendencias de mayor impacto actualmente
+        section#trabajo
+            article
+                .trabajo--title
+                    h3 Trabajos en
+                .trabajo--body
+                    figure
+                        a(href="#")
+                            img(src="image/csharp.png", alt="")
+                    figure
+                        a(href="#")
+                            img(src="image/java.png", alt="")
+                    figure
+                        a(href="#")
+                            img(src="image/nodejs.png", alt="")
+                    figure
+                        a(href="#")
+                            img(src="image/javascript.png", alt="")
+    include _footer.jade
