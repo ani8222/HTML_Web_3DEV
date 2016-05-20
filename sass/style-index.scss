@@ -40,6 +40,7 @@ nav{
   transition-duration: 0.5s;
   height:10%;
   background: #009FCA;
+  z-index: 10;
   &.fixed{
     top:0;
     position: fixed;
@@ -161,88 +162,93 @@ main{
 }
 
 .container{
-  padding:2.5em 0 0 0;
   transition-duration: 0.5s;
-  section#desarrollo{
-    padding:1em;
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  section{
+    padding:6em 1em 6em 1em;
     width: 100%;
-    article{
-      box-shadow: 0 0 5px #000;
-      padding:1.5em;
-      width: calc(25% - 1em);
-      margin:0 .5em;
 
-      figure{
-        img{
-          width:100%;
-        }
-      }
-
-      h3{
-        color: #757575;
-        height: 2.5em;
+    &#desarrollo{
+      position: relative;
+      box-shadow: 0 0 10px rgba(0,0,0,.5);
+      .desarrollo--container{
+        max-width: 1200px;
         display: flex;
-        align-items: center;
-      }
-      p{
-        padding-top:1em;
+        margin: 0 auto;
+        padding: 1em;
+        article{
+          box-shadow: 0 0 5px #000;
+          padding:1.5em;
+          width: calc(25% - 1em);
+          margin:0 .5em;
 
-      }
-    }
-  }
-
-  section#trabajo{
-    width: 100%;
-    background: #F5F5F5;
-    article{
-      padding:3em 1em;
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 1200px;
-      .trabajo--title{
-        width:100%;
-        text-align: center;
-        margin-bottom: 4em;
-        h3{
-          font-family: 'Fjalla One', sans-serif;
-          font-size: 4em;
-        }
-      }
-      .trabajo--body{
-        display: flex;
-        flex-direction: row;
-        figure{
-          flex: 1;
-          margin:0 1em;
-          overflow: hidden;
-          a{
-            display: block;
-            border-radius: 50%;
-            transition-duration: 0.5s;
-            position: relative;
-            border-width: 50px 23px 0;
+          figure{
             img{
               width:100%;
             }
-            &:hover{
-              transform: rotate(360deg);
-            }
-            &:before {
-              content: "";
-              position: absolute;
-              height: 0;
-              width: 0;
-              top: -90px;
-              left: -24px;
-            }
           }
 
+          h3{
+            color: #757575;
+            height: 2.5em;
+            display: flex;
+            align-items: center;
+          }
+          p{
+            padding-top:1em;
+
+          }
+        }
+      }
+    }
+
+    &#trabajo{
+      background: #F5F5F5;
+      article{
+        padding:3em 1em;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+        .trabajo--title{
+          width:100%;
+          text-align: center;
+          margin-bottom: 4em;
+          h3{
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 4em;
+          }
+        }
+        .trabajo--body{
+          display: flex;
+          flex-direction: row;
+          figure{
+            flex: 1;
+            margin:0 1em;
+            overflow: hidden;
+            a{
+              display: block;
+              border-radius: 50%;
+              transition-duration: 0.5s;
+              position: relative;
+              border-width: 50px 23px 0;
+              img{
+                width:100%;
+              }
+              &:hover{
+                transform: rotate(360deg);
+              }
+              &:before {
+                content: "";
+                position: absolute;
+                height: 0;
+                width: 0;
+                top: -90px;
+                left: -24px;
+              }
+            }
+
+          }
         }
       }
     }
@@ -317,7 +323,7 @@ footer{
 
 @media(max-width: 1000px){
   .container{
-    section{
+    section#desarrollo{
       flex-direction: column;
       article{
         margin: 1em 0;
@@ -410,7 +416,7 @@ footer{
   }
 
   .container{
-    section{
+    section#desarrollo{
       flex-direction: row;
       article{
         margin: 1em 1em;
@@ -446,7 +452,7 @@ footer{
 
   .container{
     padding:.5em 0;
-    section{
+    section#desarrollo{
       flex-direction: column;
       article{
         width:100%;
