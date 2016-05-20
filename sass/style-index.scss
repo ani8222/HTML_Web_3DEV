@@ -175,6 +175,8 @@ main{
         display: flex;
         margin: 0 auto;
         padding: 1em;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
         article{
           box-shadow: 0 0 5px #000;
           padding:1.5em;
@@ -207,6 +209,7 @@ main{
         padding:3em 1em;
         display: flex;
         flex-direction: column;
+
         margin: 0 auto;
         width: 100%;
         max-width: 1200px;
@@ -222,8 +225,10 @@ main{
         .trabajo--body{
           display: flex;
           flex-direction: row;
+          -webkit-flex-flow: row wrap;
+          flex-flow: row wrap;
           figure{
-            flex: 1;
+            width:calc(25% - 2em);
             margin:0 1em;
             overflow: hidden;
             a{
@@ -324,11 +329,14 @@ footer{
 @media(max-width: 1000px){
   .container{
     section#desarrollo{
-      flex-direction: column;
-      article{
-        margin: 1em 0;
-        width:25%;
+      .desarrollo--container{
+        flex-direction: column;
+        article{
+          margin: 1em 0;
+          width:25%;
+        }
       }
+
     }
     &.act{
       margin-top:0;
@@ -338,13 +346,23 @@ footer{
 }
 
 @media(max-width: 999px){
+  #bg{
+    article{
+      h1,p{
+        font-size:3em;
+      }
+    }
+  }
+
   .container{
-    section{
-      flex-direction: row;
-      justify-content: center;
-      article{
-        margin: 1em 1em;
-        width:calc(33.3333% - 2em);
+    section#desarrollo{
+      .desarrollo--container{
+        flex-direction: row;
+        justify-content: center;
+        article{
+          margin: 1em 1em;
+          width:calc(33.3333% - 2em);
+        }
       }
     }
   }
@@ -360,11 +378,8 @@ footer{
   #bg{
     height:100%;
     article{
-      h1{
-        font-size:2em;
-      }
-      p{
-        font-size:2em;
+      h1,p{
+        font-size:3em;
       }
       img{
         height:6em;
@@ -416,13 +431,28 @@ footer{
   }
 
   .container{
-    section#desarrollo{
-      flex-direction: row;
-      article{
-        margin: 1em 1em;
-        width:calc(50% - 2em);
+    section{
+      &#desarrollo{
+        .desarrollo--container{
+          flex-direction: row;
+          article{
+            margin: 1em 1em;
+            width:calc(50% - 2em);
+          }
+        }
+
+      }
+      &#trabajo{
+        article{
+          .trabajo--body{
+            figure{
+              width:calc(50% - 2em);
+            }
+          }
+        }
       }
     }
+
   }
 
   footer{
@@ -446,17 +476,28 @@ footer{
 }
 
 @media(max-width: 500px){
+  #bg{
+    article{
+      h1,p{
+        font-size:2em;
+      }
+    }
+  }
+
   nav{
     width:70%;
   }
 
   .container{
-    padding:.5em 0;
-    section#desarrollo{
-      flex-direction: column;
-      article{
-        width:100%;
-        margin:1em 0;
+    section{
+      &#desarrollo{
+        .desarrollo--container{
+          flex-direction: column;
+          article{
+            width:100%;
+            margin:1em 0;
+          }
+        }
       }
     }
   }

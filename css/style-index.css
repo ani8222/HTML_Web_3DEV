@@ -186,6 +186,8 @@ main.desact {
   display: flex;
   margin: 0 auto;
   padding: 1em;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .container section#desarrollo .desarrollo--container article {
@@ -237,10 +239,12 @@ main.desact {
 .container section#trabajo article .trabajo--body {
   display: flex;
   flex-direction: row;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .container section#trabajo article .trabajo--body figure {
-  flex: 1;
+  width: calc(25% - 2em);
   margin: 0 1em;
   overflow: hidden;
 }
@@ -343,10 +347,10 @@ footer #social a {
 }
 
 @media (max-width: 1000px) {
-  .container section#desarrollo {
+  .container section#desarrollo .desarrollo--container {
     flex-direction: column;
   }
-  .container section#desarrollo article {
+  .container section#desarrollo .desarrollo--container article {
     margin: 1em 0;
     width: 25%;
   }
@@ -356,11 +360,14 @@ footer #social a {
 }
 
 @media (max-width: 999px) {
-  .container section {
+  #bg article h1, #bg article p {
+    font-size: 3em;
+  }
+  .container section#desarrollo .desarrollo--container {
     flex-direction: row;
     justify-content: center;
   }
-  .container section article {
+  .container section#desarrollo .desarrollo--container article {
     margin: 1em 1em;
     width: calc(33.3333% - 2em);
   }
@@ -373,11 +380,8 @@ footer #social a {
   #bg {
     height: 100%;
   }
-  #bg article h1 {
-    font-size: 2em;
-  }
-  #bg article p {
-    font-size: 2em;
+  #bg article h1, #bg article p {
+    font-size: 3em;
   }
   #bg article img {
     height: 6em;
@@ -422,11 +426,14 @@ footer #social a {
     display: block;
     z-index: 2;
   }
-  .container section#desarrollo {
+  .container section#desarrollo .desarrollo--container {
     flex-direction: row;
   }
-  .container section#desarrollo article {
+  .container section#desarrollo .desarrollo--container article {
     margin: 1em 1em;
+    width: calc(50% - 2em);
+  }
+  .container section#trabajo article .trabajo--body figure {
     width: calc(50% - 2em);
   }
   footer {
@@ -448,16 +455,16 @@ footer #social a {
 }
 
 @media (max-width: 500px) {
+  #bg article h1, #bg article p {
+    font-size: 2em;
+  }
   nav {
     width: 70%;
   }
-  .container {
-    padding: .5em 0;
-  }
-  .container section#desarrollo {
+  .container section#desarrollo .desarrollo--container {
     flex-direction: column;
   }
-  .container section#desarrollo article {
+  .container section#desarrollo .desarrollo--container article {
     width: 100%;
     margin: 1em 0;
   }
