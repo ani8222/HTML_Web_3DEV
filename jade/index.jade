@@ -8,43 +8,56 @@ head
     link(rel="stylesheet", href="css/animate.min.css")
     link(rel="shortcut icon", type="image/png", href="favicon.png")
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js')
+    script(src='js/waypoints.min.js')
+    script(src='js/jquery.slides.min.js')
     script(src='js/index.js')
 body
     section.bg#bg(data-type='parallax_section' data-speed='10')
-        article
-            h1.animated.bounceInDown 12 años de experiencia
-            p.animated.bounceInLeft microsoft partner
-            img.animated.bounceInUp(src="image/3dev.png", alt="")
+        .slides
+            article.slide--item
+                h2.animated.bounceInDown 12 años de experiencia
+                p.animated.bounceInLeft microsoft partner
+            article.slide--item
+                h2.animated.bounceInDown Custom Development
+                p.animated.bounceInLeft software a medida
+            article.slide--item
+                h2.animated.bounceInDown Windows Azure
+                p.animated.bounceInLeft.
+                    flexible, abierta, sólida
+                    creada para ti!
     include _menu.jade
     .container
         section#desarrollo
             .desarrollo--container
-                article
-                    figure
-                        img(src="image/WindowsAzure.png", alt="")
-                    header
-                        h3 Windows Azure
-                    p El cómputador en la nueve o cloud computing es una de las tendencias de mayor impacto actualmente.
-                article
-                    figure
-                        img(src="image/software-factory.png", alt="")
-                    header
-                        h3 Software Factory
-                    p Es una forma de tercerizacion de servicios basados en el desarrllo de software.
-                article
-                    figure
-                        img(src="image/alm.png", alt="")
-                    header
-                        h3 Application Lifecycle Management
-                    p Es un enfoque de producción, sistematizacion y despliegue de proyecto de software diseñado con objetivo.
-                article
-                    figure
-                        img(src="image/mobile.png", alt="")
-                    header
-                        h3 Mobile Development
-                    p El cómputador en la nueve o cloud computing es una de las tendencias de mayor impacto actualmente
+                .desarrollo--title
+                    h3 Nuestros Servicios
+                .desarrollo--body
+                    article
+                        figure
+                            img(src="image/WindowsAzure.png", alt="")
+                        header
+                            h3 Windows Azure
+                        p El cómputador en la nueve o cloud computing es una de las tendencias de mayor impacto actualmente.
+                    article
+                        figure
+                            img(src="image/software-factory.png", alt="")
+                        header
+                            h3 Software Factory
+                        p Es una forma de tercerizacion de servicios basados en el desarrllo de software.
+                    article
+                        figure
+                            img(src="image/alm.png", alt="")
+                        header
+                            h3 Application Lifecycle Management
+                        p Es un enfoque de producción, sistematizacion y despliegue de proyecto de software diseñado con objetivo.
+                    article
+                        figure
+                            img(src="image/mobile.png", alt="")
+                        header
+                            h3 Mobile Development
+                        p El cómputador en la nueve o cloud computing es una de las tendencias de mayor impacto actualmente
         section#trabajo
-            article
+            .trabajo--container
                 .trabajo--title
                     h3 Trabajos en
                 .trabajo--body
@@ -58,6 +71,6 @@ body
                         a(href="#")
                             img(src="image/nodejs.png", alt="")
                     figure
-                        a(href="#")
+                        a(href="#desarrollo")
                             img(src="image/javascript.png", alt="")
     include _footer.jade

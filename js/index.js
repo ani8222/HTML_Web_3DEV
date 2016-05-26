@@ -65,9 +65,18 @@ $(document).ready(function(){
     $(window).on('scroll',function () {
         goup()
     })
+
     $('#go-up-btn').click(function () {
         $('html,body').animate({
             scrollTop : 0
         }, 700)
+    })
+
+    $(".slides").slidesjs({
+        play : {
+            restartDelay: 2500,
+            effect: "slide",
+            auto: true
+        }
     })
 });
