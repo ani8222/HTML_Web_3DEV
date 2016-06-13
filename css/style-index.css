@@ -5,99 +5,6 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 @import url(https://fonts.googleapis.com/css?family=Crete+Round);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
-}
-
-*::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: transparent;
-}
-
-*::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 2px;
-  background-color: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-nav {
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  position: relative;
-  width: 100%;
-  transition-duration: 0.5s;
-  height: 10%;
-  background: #009FCA;
-  z-index: 10;
-}
-
-nav.fixed {
-  top: 0;
-  position: fixed;
-}
-
-nav .flex-content {
-  width: 100%;
-  height: 100%;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  font-family: 'Roboto Slab', serif;
-}
-
-nav .flex-content .flex-item {
-  flex: 1;
-  -webkit-flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  text-align: center;
-}
-
-nav .flex-content .flex-item.logo {
-  overflow: hidden;
-}
-
-nav .flex-content .flex-item.logo img {
-  width: 100%;
-  display: block;
-}
-
-nav .flex-content .flex-item.logo a {
-  box-shadow: none !important;
-}
-
-nav .flex-content .flex-item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 65%;
-  overflow: hidden;
-  transition-duration: 0.5s;
-}
-
-nav .flex-content .flex-item a:hover {
-  box-shadow: 0 -2px rgba(0, 0, 0, 0.3) inset;
-}
-
-nav .flex-content a {
-  width: 100%;
-  color: #ffffff;
-  text-decoration: none;
-}
-
 #bg {
   background: url(../image/bg.jpg) 50% 0 no-repeat fixed;
   margin: 0 auto;
@@ -187,38 +94,6 @@ nav .flex-content a {
   font-size: 2em;
   color: #fff;
   overflow: hidden;
-}
-
-main {
-  position: fixed;
-  top: 0;
-  margin-top: .5em;
-  font-size: 1.3em;
-  display: none;
-  transition-duration: 0.5s;
-  left: 0;
-}
-
-main a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-main.activo {
-  margin-left: calc(100vw - 2.5em);
-}
-
-main.desact {
-  margin-left: .5em;
 }
 
 .container {
@@ -352,74 +227,6 @@ main.desact {
   margin-top: 122px;
 }
 
-.go-up {
-  display: block;
-  position: fixed;
-  bottom: 16px;
-  margin-right: .5em;
-  right: 0;
-  font-size: 1.3em;
-  opacity: 0;
-}
-
-.go-up a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.go-up.show {
-  opacity: 1;
-}
-
-footer {
-  width: 100%;
-  background: #1570A6;
-  color: #fff;
-  padding: 1em 0;
-  display: flex;
-}
-
-footer p, footer #social {
-  display: inline-block;
-}
-
-footer p {
-  flex: 3;
-  display: flex;
-  align-items: center;
-  padding-left: 1em;
-}
-
-footer #social {
-  flex: 2;
-  text-align: right;
-  display: flex;
-  flex-direction: row-reverse;
-  padding-right: calc(1em + 40px);
-}
-
-footer #social a {
-  text-decoration: none;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 .5em;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.4);
-}
-
 @media (max-width: 1000px) {
   .container section#desarrollo .desarrollo--container {
     flex-direction: column;
@@ -530,9 +337,6 @@ footer #social a {
   #bg .slides .slide--item h2, #bg .slides .slide--item p {
     font-size: 2.2em;
     text-align: center;
-  }
-  nav {
-    width: 70%;
   }
   .container section#desarrollo .desarrollo--container .desarrollo--body {
     padding: .1em;
